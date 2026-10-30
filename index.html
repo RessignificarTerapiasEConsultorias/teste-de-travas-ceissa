@@ -233,6 +233,46 @@ img{max-width:100%;display:block}
   .capa .moldura{margin:0;width:300px}
   .capa h1{font-size:44px}
 }
+
+/* ===================== PADRÃO TRAVAS v2 ===================== */
+.regua{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;align-items:end;margin-bottom:12px}
+.nota{min-height:64px;height:calc(64px + var(--n,1) * 4px);padding:0;border-radius:10px;font-size:17px}
+@media (min-width:640px){.regua{gap:8px}.nota{font-size:19px;min-height:64px}}
+.pontas{font-size:13.5px}
+.orient-h2{font-size:22px;margin:26px 0 10px}
+.passos-orient{list-style:none;counter-reset:p;padding:0;margin:0 0 6px}
+.passos-orient li{counter-increment:p;position:relative;padding:12px 14px 12px 56px;background:var(--papel);border:1.4px solid var(--borda);border-radius:14px;margin-bottom:10px;font-size:16.5px}
+.passos-orient li::before{content:counter(p);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:var(--ardosia);color:#fff;font-weight:700;display:grid;place-items:center;font-size:15px}
+.como-responder{background:var(--ardosia-clara);border-radius:18px;padding:18px 18px 8px;margin:10px 0 6px}
+.como-responder ul{margin:0 0 10px;padding-left:20px}
+.como-responder li{margin-bottom:8px;font-size:16.5px}
+.mini-escala{display:flex;align-items:flex-end;gap:4px;margin:10px 0 6px}
+.mini-escala i{flex:1;display:grid;place-items:center;border-radius:8px;background:var(--papel);border:1.4px solid var(--borda);font-style:normal;font-weight:700;font-size:14px;color:var(--tinta)}
+.mini-escala-pontas{display:flex;justify-content:space-between;font-size:13.5px;color:var(--tinta-suave);margin-bottom:12px;gap:12px}
+.cuidados{margin:0 0 20px;padding-left:20px}
+.cuidados li{margin-bottom:8px;font-size:16.5px}
+.campo-check{margin-top:4px}
+.check{display:flex;gap:12px;align-items:flex-start;cursor:pointer;font-size:16px;line-height:1.5}
+.check input{flex:none;width:26px;height:26px;margin-top:1px;accent-color:var(--ardosia)}
+.insight{background:var(--papel);border:1.6px solid var(--borda);border-left:7px solid var(--ardosia);border-radius:16px;padding:18px 18px 8px;margin-bottom:18px}
+.insight h2{font-size:21px;margin-bottom:8px}
+.insight p{font-size:16.5px}
+.grupo-titulo{font-size:22px;margin:26px 0 4px}
+.grupo-sub{font-size:16px;color:var(--tinta-suave);margin-bottom:14px}
+.grupo-titulo.g-alta{color:#8A2B22}
+.grupo-titulo.g-media{color:#2F4E75}
+.grupo-titulo.g-baixa{color:#2F5E3F}
+.bloco-trava.enfase{border-left-width:10px;border-color:#E3B5AE;background:#FFF9F8;box-shadow:0 10px 26px rgba(178,58,47,.13)}
+.bloco-trava.enfase h3{font-size:23px}
+.selo-prioridade{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:#B23A2F;border-radius:999px;padding:3px 10px;margin-left:8px;vertical-align:middle}
+.caixa-parabens{background:var(--baixa-clara);color:#2F5E3F;font-weight:600}
+.alternar{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.alternar button{min-height:64px;padding:10px 12px;border-radius:14px;border:1.6px solid var(--borda);background:var(--papel);color:var(--tinta);font:700 15.5px/1.3 'Karla',sans-serif;cursor:pointer;text-align:left}
+.alternar button small{display:block;font-weight:500;font-size:13px;color:var(--tinta-suave);margin-top:2px}
+.alternar button.ativa{border-color:var(--ardosia);background:var(--ardosia-clara);box-shadow:inset 0 0 0 1.5px var(--ardosia)}
+.tag-vis{font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--ardosia-clara);color:var(--ardosia);margin-left:6px;white-space:nowrap}
+.lista-gerados .linha-item{cursor:default}
+.mini-btn{border:1.4px solid var(--borda);background:var(--papel);border-radius:10px;min-height:44px;padding:0 14px;font:700 15px 'Karla',sans-serif;color:var(--ardosia);cursor:pointer}
 </style>
 <style>
 #vitrineRessignificar{margin:18px 0 22px}
@@ -303,6 +343,34 @@ img{max-width:100%;display:block}
 .fin-rolagem{overflow-x:auto}
 @media print{#financeiroRessignificar{display:none!important}}
 </style>
+<style id="css-v3">
+/* v3: pontos de atenção, 50 respostas, escolha do PDF */
+.faixas{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start;margin-bottom:10px}
+.bloco-trava .faixas .faixa{margin-bottom:0}
+.tag-atencao{display:inline-block;font-size:13px;font-weight:700;padding:4px 11px;border-radius:999px;margin:0;background:#FFF1BF;color:#7A5B00;border:1.4px solid #E8C24A;line-height:1.35}
+.bloco-trava .caixa-atencao{background:#FFF8DC;border:1.4px solid #E8C24A;color:#5C4500}
+.caixa-atencao ul{margin:8px 0 0;padding-left:20px}
+.caixa-atencao li{margin-bottom:6px;font-size:15.5px}
+.det-50{background:var(--papel);border:1.4px solid var(--borda);border-radius:14px;padding:2px 16px 8px;margin:22px 0 18px}
+.det-50 summary{cursor:pointer;font-weight:700;font-size:17px;padding:14px 0 10px}
+.det-50 .nota-det{font-size:14.5px;color:var(--tinta-suave);margin:0 0 6px}
+.resp-trava h4{margin:18px 0 4px;font-size:17px;display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-family:'Karla',sans-serif}
+.resp-trava h4 span{font-size:14px;font-weight:700;white-space:nowrap}
+.resp-lin{display:flex;gap:12px;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--borda);font-size:15.5px;line-height:1.4}
+.resp-lin .rn{flex:0 0 auto;min-width:36px;text-align:center;font-weight:700;border-radius:8px;padding:2px 6px;background:var(--areia)}
+.resp-lin.alto .rn{background:#FFF1BF;color:#7A5B00;border:1.4px solid #E8C24A}
+.escolha-pdf{border:1.4px dashed var(--borda);border-radius:14px;padding:14px 14px 4px;margin:0 0 12px}
+.escolha-pdf[hidden]{display:none}
+.escolha-pdf p{margin:0 0 10px;font-weight:700}
+@media print{
+  .det-50{display:none!important}
+  body.print-completo .det-50{display:block!important}
+  body.print-completo .det-50 summary{pointer-events:none}
+  .bloco-trava,.insight,.painel-geral,.resp-lin,.resp-trava h4{break-inside:avoid}
+  #detalhe-conteudo .secao-titulo,#detalhe-conteudo .grupo-titulo,#detalhe-conteudo .grupo-sub,.resp-trava h4{break-after:avoid-page}
+  #detalhe-conteudo .escolha-pdf{display:none!important}
+}
+</style>
 </head>
 <body>
 <div class="envelope">
@@ -329,7 +397,7 @@ img{max-width:100%;display:block}
         <div class="campo" style="margin-bottom:10px">
           <label for="campo-codigo">Digite o código que a Ceissa te enviou</label>
           <input id="campo-codigo" class="codigo-input" type="text" inputmode="text" autocomplete="off" placeholder="CE-0000" maxlength="9">
-          <div class="dica">Cada código abre o teste uma única vez.</div>
+          <div class="dica" id="dica-codigo">Cada código abre o teste uma única vez.</div>
         </div>
         <div class="aviso" id="aviso-codigo"></div>
         <button class="btn btn-primario" id="btn-entrar" disabled>Digite o código</button>
@@ -342,6 +410,50 @@ img{max-width:100%;display:block}
     &nbsp;·&nbsp;
     <a href="#" id="link-admin">Área da Ceissa</a>
   </div>
+</section>
+
+<!-- ======================= TELA — ORIENTAÇÃO (antes de começar) ======================= -->
+<section class="tela" id="tela-orientacao">
+  <button class="voltar" id="voltar-orient">← Voltar</button>
+  <span class="selo">Antes de começar</span>
+  <h1 style="font-size:clamp(28px,7vw,38px);margin:0 0 16px">Descubra o Que Está Te Impedindo de Avançar!</h1>
+  <p>Você sente que está sempre se sabotando, mesmo quando sabe o que precisa fazer? Pode ser que algumas travas mentais estejam agindo silenciosamente nos bastidores da sua mente.</p>
+  <p>Este teste foi criado para te ajudar a identificar quais padrões limitantes estão bloqueando o seu progresso pessoal ou profissional. Em poucos minutos, você terá clareza sobre os principais sabotadores que podem estar afetando suas decisões, autoestima e resultados.</p>
+  <p><strong>Responda com sinceridade e descubra o que está travando a sua evolução.</strong></p>
+
+  <h2 class="orient-h2">Como o teste funciona</h2>
+  <ol class="passos-orient">
+    <li><b>Você conta um pouco sobre você.</b> São 2 etapas rápidas: os seus dados e a sua história.</li>
+    <li><b>Você responde 50 perguntas.</b> Uma de cada vez, na tela, em 10 a 15 minutos.</li>
+    <li id="orient-passo3"><b>Você recebe o seu resultado.</b></li>
+    <li><b>Vocês conversam a partir dele.</b> O que você respondeu vai direto para a Ceissa, para a conversa de vocês começar do ponto certo.</li>
+  </ol>
+
+  <h2 class="orient-h2">Como responder</h2>
+  <div class="como-responder">
+    <ul>
+      <li><b>Responda pensando em HOJE.</b> Em como você está neste momento da sua vida, e não em como já foi nem em como gostaria de ser.</li>
+      <li><b>Use a escala de 1 a 10:</b> o <b>1</b> significa que aquilo <b>não representa nada</b> para você, e o <b>10</b> significa que aquilo <b>representa muito</b>, descreve você por completo.</li>
+    </ul>
+    <div class="mini-escala" aria-hidden="true">
+      <i style="height:44px">1</i><i style="height:48px">2</i><i style="height:52px">3</i><i style="height:56px">4</i><i style="height:60px">5</i><i style="height:64px">6</i><i style="height:68px">7</i><i style="height:72px">8</i><i style="height:76px">9</i><i style="height:80px">10</i>
+    </div>
+    <div class="mini-escala-pontas"><span>1 · não representa nada</span><span style="text-align:right">10 · representa muito</span></div>
+    <ul>
+      <li><b>Não existe resposta certa ou errada.</b> Vá no primeiro impulso: a primeira resposta costuma ser a mais verdadeira.</li>
+      <li>Se quiser corrigir, é só voltar para a pergunta anterior.</li>
+    </ul>
+  </div>
+
+  <h2 class="orient-h2">Antes de começar</h2>
+  <ul class="cuidados">
+    <li>Escolha um lugar tranquilo, sem interrupções, e reserve de 10 a 15 minutos.</li>
+    <li>Não feche nem atualize a página no meio. Se isso acontecer, você recomeça do início. O seu código só é usado quando você termina.</li>
+    <li>As suas respostas são confidenciais: só você e a Ceissa têm acesso a elas.</li>
+    <li>Este teste é uma ferramenta de autoconhecimento. Ele não é um diagnóstico nem substitui o acompanhamento profissional.</li>
+  </ul>
+  <button class="btn btn-primario" id="btn-orient">Entendi, vamos começar</button>
+  <p class="nota-rodape">Ficou com alguma dúvida? <a id="link-zap-orient" href="#" target="_blank" rel="noopener">Fale com a Ceissa no WhatsApp</a></p>
 </section>
 
 <!-- ======================= TELA 2 — QUALIFICAÇÃO ======================= -->
@@ -425,6 +537,13 @@ img{max-width:100%;display:block}
       <textarea id="campo-olhar" placeholder="Sem filtro, como vier"></textarea>
       <div class="erro"></div>
     </div>
+    <div class="campo campo-check" id="c-consent">
+      <label class="check" for="campo-consent">
+        <input id="campo-consent" type="checkbox">
+        <span>Concordo que as minhas respostas sejam enviadas para a Ceissa, que vai usá-las para me atender e mantê-las em sigilo.</span>
+      </label>
+      <div class="erro"></div>
+    </div>
     <button class="btn btn-primario" id="btn-etapa2" disabled>Responda as duas perguntas</button>
   </div>
 </section>
@@ -458,12 +577,14 @@ img{max-width:100%;display:block}
     </div>
   </div>
 
+  <div class="insight" id="insight"></div>
+
   <div class="teia">
     <canvas id="teia" role="img" aria-label="Gráfico de teia com as dez travas"></canvas>
     <div class="legenda">
-      <span><i style="background:#B23A2F"></i>Alta (7 a 10)</span>
-      <span><i style="background:#3F6698"></i>Média (4 a 6,9)</span>
-      <span><i style="background:#3F7D55"></i>Baixa (até 3,9)</span>
+      <span><i style="background:#B23A2F"></i>Alta (6 a 10)</span>
+      <span><i style="background:#3F6698"></i>Média (5 a 5,9)</span>
+      <span><i style="background:#3F7D55"></i>Baixa (até 4,9)</span>
     </div>
   </div>
 
@@ -488,6 +609,19 @@ img{max-width:100%;display:block}
     <span class="nome-rodape">Ceissa Viana · Terapeuta</span>
     Obrigada pela sua honestidade. O próximo passo é uma conversa.
   </div>
+</section>
+
+<!-- ======================= TELA — AGRADECIMENTO (quando a terapeuta escolheu não mostrar o resultado) ======================= -->
+<section class="tela" id="tela-obrigada">
+  <span class="selo">Teste concluído</span>
+  <h1 style="font-size:clamp(27px,6.6vw,37px);margin-bottom:12px" id="titulo-obrigada">Obrigada!</h1>
+  <p>Você chegou até o fim, e isso já é um ato de cuidado com você. As suas respostas foram enviadas para a Ceissa.</p>
+  <p>Ela vai olhar o seu resultado com atenção e te chamar para conversarem sobre o que apareceu. Se quiser adiantar a conversa, é só tocar no botão abaixo.</p>
+  <a class="btn btn-zap" id="btn-zap-obrigada" href="#" target="_blank" rel="noopener">
+    <span class="duas">Falar com a Ceissa no WhatsApp<small id="zap-sub-obrigada">abre a conversa com mensagem pronta</small></span>
+  </a>
+  <p class="nota-rodape" id="nota-envio-2"></p>
+  <div class="rodape"><span class="nome-rodape">Ceissa Viana · Terapeuta</span>Obrigada pela sua honestidade. O próximo passo é uma conversa.</div>
 </section>
 
 <!-- ======================= TELA 6 — ÁREA DA TERAPEUTA ======================= -->
@@ -529,7 +663,19 @@ img{max-width:100%;display:block}
         <div class="campo">
           <label for="cod-whats">WhatsApp da cliente <span class="opc">(opcional)</span></label>
           <input id="cod-whats" type="tel" inputmode="tel" placeholder="(00) 00000-0000">
-          <div class="dica">Com o telefone, o botão já abre a conversa dela com o código dentro.</div>
+          <div class="dica">Com o telefone, o botão já abre a conversa dela com o link e a mensagem acolhedora prontos.</div>
+        </div>
+        <div class="campo">
+          <label id="rot-alt-resultado">A cliente vai ver o resultado no final?</label>
+          <div class="alternar" id="alt-resultado" role="radiogroup" aria-labelledby="rot-alt-resultado">
+            <button type="button" class="ativa" data-v="1" role="radio" aria-checked="true">Sim, ela vê<small>o mapa e a análise de cada trava</small></button>
+            <button type="button" data-v="0" role="radio" aria-checked="false">Não, só eu vejo<small>ela recebe só um agradecimento</small></button>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="cod-qtd">Quantos códigos gerar?</label>
+          <select id="cod-qtd"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>10</option></select>
+          <div class="dica" id="dica-qtd">Cada código vale para uma pessoa, uma vez só.</div>
         </div>
         <button class="btn btn-argila" id="btn-gerar">Gerar código</button>
       </div>
@@ -679,8 +825,8 @@ const ACOES = {
 };
 
 /* Faixas da nota (escala 1 a 10) */
-const CORTE_ALTA = 7.0;
-const CORTE_MEDIA = 4.0;
+const CORTE_ALTA = 6.0;
+const CORTE_MEDIA = 5.0;
 
 /* ============================================================================
    2. AS DEZ TRAVAS  (a ordem aqui é a ordem do gráfico de teia)
@@ -787,7 +933,7 @@ const estado = {
   codigo:'', nome:'', idade:'', genero:'', whatsapp:'', email:'', profissao:'', renda:'',
   motivo:'', dor:'', olhar:'',
   indice:0, respostas:new Array(PERGUNTAS.length).fill(null),
-  resultado:null, inicio:null
+  resultado:null, inicio:null, mostrarResultado:true
 };
 
 function guardar(c,v){ try{ localStorage.setItem(c, JSON.stringify(v)); }catch(e){} }
@@ -815,7 +961,7 @@ function vigiar(campos, seletorBotao, rotuloPronto){
     let faltam = 0;
     campos.forEach(c => {
       const el = $(c.id), caixa = el.closest('.campo');
-      const ok = c.valida(el.value);
+      const ok = c.valida(el.type === 'checkbox' ? (el.checked ? '1' : '') : el.value);
       if(!ok) faltam++;
       if(mostrarErros === true || (mostrarErros === el && !ok)){
         caixa.classList.toggle('ruim', !ok);
@@ -851,7 +997,8 @@ const CAMPOS1 = [
 ];
 const CAMPOS2 = [
   {id:'#campo-dor',   valida:v => v.trim().length>=15, erro:'Escreva um pouco mais — pelo menos uma frase completa.'},
-  {id:'#campo-olhar', valida:v => v.trim().length>=15, erro:'Escreva um pouco mais — pelo menos uma frase completa.'}
+  {id:'#campo-olhar', valida:v => v.trim().length>=15, erro:'Escreva um pouco mais — pelo menos uma frase completa.'},
+  {id:'#campo-consent', valida:v => v === '1', erro:'Marque a caixinha para continuar.'}
 ];
 
 /* ============================================================================
@@ -877,7 +1024,7 @@ async function api(acao, dados){
     if(acao === ACOES.gerarCodigo){
       let codigo = dados.codigo;
       for(let t=0; t<6; t++){
-        const { error } = await c.from('travas_codigos').insert({ terapeuta_id:uid, codigo, cliente:dados.cliente||null, whatsapp:dados.whatsapp||null });
+        const { error } = await c.from('travas_codigos').insert({ terapeuta_id:uid, codigo, cliente:dados.cliente||null, whatsapp:dados.whatsapp||null, mostrar_resultado: dados.mostrar !== false });
         if(!error) return { ok:true, codigo };
         if(error.code === '23505'){ codigo = novoCodigo(); continue; }   // código repetido: sorteia outro
         return { ok:false, erro:String(error.message||error) };
@@ -885,11 +1032,11 @@ async function api(acao, dados){
       return { ok:false, erro:'nao_gerou' };
     }
     if(acao === ACOES.listarCodigos){
-      const { data, error } = await c.from('travas_codigos').select('codigo,cliente,whatsapp,criado_em,usado,usado_por,usado_em')
+      const { data, error } = await c.from('travas_codigos').select('codigo,cliente,whatsapp,criado_em,usado,usado_por,usado_em,mostrar_resultado')
         .eq('terapeuta_id', uid).order('criado_em',{ascending:false}).limit(300);
       if(error) return { ok:false, erro:String(error.message||error) };
       return { ok:true, codigos:(data||[]).map(x => ({ codigo:x.codigo, cliente:x.cliente||'', whatsapp:x.whatsapp||'', criadoEm:quando(x.criado_em),
-        usado:x.usado, usadoPor:x.usado_por||'', usadoEm:x.usado_em ? quando(x.usado_em) : '' })) };
+        usado:x.usado, mostrarResultado:x.mostrar_resultado !== false, usadoPor:x.usado_por||'', usadoEm:x.usado_em ? quando(x.usado_em) : '' })) };
     }
     if(acao === ACOES.listarRespostas){
       const { data, error } = await c.from('travas_respostas').select('dados').eq('terapeuta_id', uid).order('criado_em',{ascending:false}).limit(300);
@@ -915,14 +1062,14 @@ async function validarCodigo(codigo){
   if(!modoLocal()){
     const r = await api(ACOES.validarCodigo,{codigo});
     if(r && r.ok === false && r.erro) return {ok:false, msg:'Não consegui verificar agora. Confira a sua internet e tente de novo.'};
-    if(r && (r.valido === true || r.ok === true)) return {ok:true};
+    if(r && (r.valido === true || r.ok === true)) return {ok:true, mostrar: r.mostrar_resultado !== false, cliente: r.cliente || ''};
     return {ok:false, msg:(r && r.msg) || 'Esse código não está valendo. Ele já foi usado ou foi digitado diferente.'};
   }
   const lista = ler(CHAVE_CODIGOS, []);
   const achado = lista.find(c => c.codigo === codigo);
   if(!achado) return {ok:false, msg:'Esse código não existe. Confira as letras e tente de novo.'};
   if(achado.usado) return {ok:false, msg:'Esse código já foi usado. Peça um novo para a Ceissa.'};
-  return {ok:true};
+  return {ok:true, mostrar:(achado.mostrarResultado !== false), cliente: achado.cliente || ''};
 }
 function marcarUsadoLocal(codigo, nome){
   const lista = ler(CHAVE_CODIGOS, []);
@@ -939,7 +1086,7 @@ $('#campo-codigo').addEventListener('input', e => {
   avisar('#aviso-codigo','');
   const b = $('#btn-entrar');
   b.disabled = e.target.value.length < 5;
-  b.textContent = b.disabled ? 'Digite o código' : 'Começar o teste';
+  b.textContent = b.disabled ? 'Digite o código' : 'Entrar';
 });
 $('#campo-codigo').addEventListener('keydown', e => { if(e.key==='Enter' && !$('#btn-entrar').disabled) $('#btn-entrar').click(); });
 
@@ -948,14 +1095,38 @@ $('#btn-entrar').addEventListener('click', async () => {
   const codigo = $('#campo-codigo').value.trim().toUpperCase();
   b.disabled = true; b.textContent = 'Verificando o código...';
   const r = await validarCodigo(codigo);
-  if(!r.ok){ b.disabled=false; b.textContent='Começar o teste'; avisar('#aviso-codigo', r.msg); return; }
+  if(!r.ok){ b.disabled=false; b.textContent='Entrar'; avisar('#aviso-codigo', r.msg); return; }
   estado.codigo = codigo;
-  b.textContent = 'Começar o teste';
-  mostrarTela('#tela-dados1');
-  setTimeout(()=>$('#campo-nome').focus(), 120);
+  estado.mostrarResultado = r.mostrar !== false;
+  b.textContent = 'Entrar';
+  if(r.cliente && !$('#campo-nome').value.trim()){ $('#campo-nome').value = r.cliente; $('#campo-nome').dispatchEvent(new Event('input')); }
+  prepararOrientacao();
+  mostrarTela('#tela-orientacao');
 });
-$('#voltar-capa').addEventListener('click', ()=> mostrarTela('#tela-capa'));
+$('#voltar-capa').addEventListener('click', ()=> mostrarTela('#tela-orientacao'));
 $('#voltar-dados1').addEventListener('click', ()=> mostrarTela('#tela-dados1'));
+
+/* ---- código já preenchido pelo link (?c=CODIGO) ---- */
+(function(){
+  try{
+    const bruto = new URLSearchParams(location.search).get('c') || '';
+    const c = bruto.toUpperCase().replace(/[^A-Z0-9-]/g,'').slice(0,9);
+    if(!c) return;
+    const campo = $('#campo-codigo');
+    campo.value = c;
+    campo.dispatchEvent(new Event('input'));
+    $('#dica-codigo').textContent = 'O seu código já está preenchido. É só tocar em Entrar.';
+  }catch(e){}
+})();
+function prepararOrientacao(){
+  $('#orient-passo3').innerHTML = estado.mostrarResultado
+    ? '<b>Você vê o seu resultado.</b> No final aparece o mapa das suas 10 travas, da mais forte para a mais leve, e o que cada uma significa.'
+    : '<b>A Ceissa recebe o seu resultado.</b> Ela vai analisar com carinho e te chamar para conversarem sobre ele.';
+}
+$('#link-zap-orient').href = 'https://wa.me/' + CONFIG.whatsappNumero;
+$('#voltar-orient').addEventListener('click', ()=> mostrarTela('#tela-capa'));
+$('#btn-orient').addEventListener('click', ()=>{ mostrarTela('#tela-dados1'); setTimeout(()=>$('#campo-nome').focus(), 120); });
+
 
 /* ============================================================================
    9. ETAPAS DO FORMULÁRIO
@@ -995,7 +1166,7 @@ function desenharPergunta(){
   const trava = TRAVAS.find(t => t.id === p.t);
   $('#texto-pergunta').textContent = (i+1) + '. ' + p.q;
   $('#contador').textContent = 'Pergunta ' + (i+1) + ' de ' + PERGUNTAS.length;
-  $('#tema-atual').textContent = trava.curto;
+  $('#tema-atual').textContent = '';   // o nome da trava não aparece para quem responde
   $('#barra-progresso').style.width = (i / PERGUNTAS.length * 100) + '%';
   $('#voltar-pergunta').style.visibility = i===0 ? 'hidden' : 'visible';
 
@@ -1006,6 +1177,7 @@ function desenharPergunta(){
     b.type='button';
     b.className = 'nota' + (estado.respostas[i]===n ? ' escolhida' : '');
     b.textContent = n;
+    b.style.setProperty('--n', n);
     b.setAttribute('aria-label', 'Nota ' + n);
     b.addEventListener('click', ()=> responder(n, b));
     regua.appendChild(b);
@@ -1034,6 +1206,7 @@ function nivelDe(nota){ return nota >= CORTE_ALTA ? 'alta' : nota >= CORTE_MEDIA
 function cor(nivel){ return nivel==='alta' ? '#B23A2F' : nivel==='media' ? '#3F6698' : '#3F7D55'; }
 function nomeNivel(nivel){ return nivel==='alta' ? 'Trava alta' : nivel==='media' ? 'Trava média' : 'Trava baixa'; }
 function num(n){ return n.toFixed(1).replace('.', ','); }
+const contarNivel = (r,n) => (r.travas||[]).filter(t => nivelDe(t.nota) === n).length;
 
 function calcular(){
   const soma = {}; TRAVAS.forEach(t => soma[t.id] = {s:0,n:0});
@@ -1053,6 +1226,16 @@ function calcular(){
 async function finalizar(){
   const r = calcular(); estado.resultado = r;
   const primeiro = estado.nome.split(' ')[0];
+
+  if(!estado.mostrarResultado){
+    const primeiroNome = estado.nome.split(' ')[0];
+    $('#titulo-obrigada').textContent = 'Obrigada, ' + primeiroNome + '!';
+    $('#btn-zap-obrigada').href = 'https://wa.me/' + CONFIG.whatsappNumero + '?text=' + encodeURIComponent(mensagemCliente(r, false));
+    $('#zap-sub-obrigada').textContent = 'abre a conversa com ' + CONFIG.whatsappVisivel;
+    mostrarTela('#tela-obrigada');
+    await enviarResultado(r);
+    return;
+  }
   $('#titulo-resultado').textContent = primeiro + ', aqui está o seu mapa';
   $('#intro-resultado').textContent = r.altas > 0
     ? 'Você tem ' + r.altas + (r.altas===1 ? ' trava no vermelho. É ela que está te segurando com mais força hoje.' : ' travas no vermelho. São elas que estão te segurando com mais força hoje.')
@@ -1070,55 +1253,48 @@ async function finalizar(){
       <div class="trilho"><i style="width:${l.pct}%;background:${cor(l.nivel)}"></i></div>
     </div>`).join('');
 
-  $('#detalhes').innerHTML = ordenadas.map(l=>{
-    const fundo = l.nivel==='alta' ? 'var(--alta-clara)' : l.nivel==='media' ? 'var(--media-clara)' : 'var(--baixa-clara)';
-    const corTexto = l.nivel==='alta' ? '#8A2B22' : l.nivel==='media' ? '#2F4E75' : '#2F5E3F';
-    let acao;
-    if(l.nivel==='alta'){
-      acao = `<div class="caixa caixa-urgencia">Prioridade: esta trava está ativa agora e cobra um preço todos os dias — em oportunidade, em relação e em saúde emocional. Quanto mais tempo ela fica solta, mais fundo o padrão se repete. Leve esta trava para a Ceissa ainda esta semana.</div>`;
-    }else if(l.nivel==='media'){
-      acao = `<div class="caixa" style="background:var(--media-clara);color:#2F4E75;font-weight:600">Atenção: ela não domina o seu dia, mas aparece sempre que a vida aperta. Tratada agora, não vira uma trava alta.</div>`;
-    }else{
-      acao = `<div class="caixa" style="background:var(--baixa-clara);color:#2F5E3F;font-weight:600">Ponto de força: aqui você já se sustenta bem. Essa é a base que a Ceissa vai usar para destravar as outras.</div>`;
-    }
-    return `
-    <div class="bloco-trava" style="border-left-color:${cor(l.nivel)}">
-      <div class="cabeca"><h3>${l.nome}</h3><span class="pontos" style="color:${cor(l.nivel)}">${num(l.nota)} / 10</span></div>
-      <span class="faixa" style="background:${fundo};color:${corTexto}">${nomeNivel(l.nivel)}</span>
-      <p>${l.contexto}</p>
-      <div class="caixa caixa-tecnica"><b>Como podemos trabalhar:</b> ${l.tecnica}</div>
-      ${acao}
-    </div>`;
-  }).join('');
+  const resps = respostasDe({ respostas: PERGUNTAS.map((p,i)=>({ n:i+1, pergunta:p.q, trava:p.t, valor:estado.respostas[i] || 1 })) });
+  anexarAtencao(ordenadas, resps);
+  $('#detalhes').innerHTML = htmlGrupos(ordenadas, 'cliente');
+  $('#insight').innerHTML = htmlInsight({ altas:r.altas, medias:r.medias, baixas:r.baixas }, ordenadas[0], 'cliente');
 
-  $('#btn-zap-resultado').href = 'https://wa.me/' + CONFIG.whatsappNumero + '?text=' + encodeURIComponent(mensagemCliente(r));
+  $('#btn-zap-resultado').href = 'https://wa.me/' + CONFIG.whatsappNumero + '?text=' + encodeURIComponent(mensagemCliente(r, true));
   $('#zap-sub').textContent = 'abre a conversa com ' + CONFIG.whatsappVisivel;
 
   mostrarTela('#tela-resultado');
   await enviarResultado(r);
 }
 
-function mensagemCliente(r){
+function mensagemCliente(r, comResultado){
+  if(!comResultado){
+    return [
+      'Oi, Ceissa! Tudo bem?',
+      '',
+      'Acabei de terminar o Teste de Travas Mentais e quero muito agendar a minha sessão com você.',
+      '',
+      'Sou *' + estado.nome + '*.',
+      '',
+      'Quais horários você tem disponíveis? Fico no aguardo, com carinho e gratidão.'
+    ].join('\n');
+  }
   const top = r.linhas.slice().sort((a,b)=>b.nota-a.nota).slice(0,3);
-  const emoji = n => n==='alta' ? '🔴' : n==='media' ? '🔵' : '🟢';
-  const dor = estado.dor.length > 140 ? estado.dor.slice(0,140) + '...' : estado.dor;
+  const dorLetras = Array.from(estado.dor);   // conta letras e emojis inteiros, sem cortar ao meio
+  const dor = dorLetras.length > 140 ? dorLetras.slice(0,140).join('') + '...' : estado.dor;
   return [
-    'Oi, Ceissa! 🌿',
+    'Oi, Ceissa!',
     '',
     'Acabei de terminar o Teste de Travas Mentais.',
     '',
     'Sou *' + estado.nome + '*, ' + estado.idade + ' anos, ' + estado.profissao + '.',
     '',
     'As minhas travas mais fortes:',
-    emoji(top[0].nivel) + ' ' + top[0].nome + ' — ' + num(top[0].nota) + '/10',
-    emoji(top[1].nivel) + ' ' + top[1].nome + ' — ' + num(top[1].nota) + '/10',
-    emoji(top[2].nivel) + ' ' + top[2].nome + ' — ' + num(top[2].nota) + '/10',
+    ...top.map(l => '- ' + l.nome + ': ' + num(l.nota) + '/10 (' + nomeNivel(l.nivel).toLowerCase() + ')'),
     '',
-    'No total: ' + r.altas + ' altas, ' + r.medias + ' médias e ' + r.baixas + ' baixas.',
+    'No total: ' + (r.altas === 1 ? '1 alta' : r.altas + ' altas') + ', ' + (r.medias === 1 ? '1 média' : r.medias + ' médias') + ' e ' + (r.baixas === 1 ? '1 baixa' : r.baixas + ' baixas') + '.',
     '',
     'O que mais me pesa hoje: "' + dor + '"',
     '',
-    'Quero marcar um horário com você para trabalhar isso. 💛'
+    'Quero marcar um horário com você para trabalhar isso.'
   ].join('\n');
 }
 
@@ -1153,7 +1329,8 @@ async function enviarResultado(r){
     travaMaisForte: r.linhas.slice().sort((a,b)=>b.nota-a.nota)[0].nome,
     travas: r.linhas.map(l=>({id:l.id, nome:l.nome, nota:l.nota, nivel:l.nivel})),
     respostas: PERGUNTAS.map((p,i)=>({n:i+1, pergunta:p.q, trava:p.t, valor:estado.respostas[i]})),
-    emailTerapeuta: CONFIG.emailTerapeuta
+    emailTerapeuta: CONFIG.emailTerapeuta,
+    consentimento:true, consentimentoEm:hoje()
   };
   const lista = ler(CHAVE_RESP, []); lista.unshift(pacote); guardar(CHAVE_RESP, lista);
 
@@ -1163,9 +1340,10 @@ async function enviarResultado(r){
     return;
   }
   const resp = await api(ACOES.salvarResposta, pacote);
-  $('#nota-envio').textContent = (resp && resp.ok === false)
+  const msgEnvio = (resp && resp.ok === false)
     ? 'Não consegui registrar agora. Toque no botão verde para enviar o seu resultado direto para a Ceissa.'
     : 'Pronto: a Ceissa já recebeu o seu resultado.';
+  $('#nota-envio').textContent = msgEnvio; $('#nota-envio-2').textContent = msgEnvio;
 }
 
 /* ============================================================================
@@ -1273,61 +1451,105 @@ $$('.abas button').forEach(b=> b.addEventListener('click', ()=>{
 }));
 
 /* ---- códigos ---- */
+let mostrarSel = true;
+$$('#alt-resultado button').forEach(b=> b.addEventListener('click', ()=>{
+  mostrarSel = b.dataset.v === '1';
+  $$('#alt-resultado button').forEach(x=>{ const on = x === b; x.classList.toggle('ativa', on); x.setAttribute('aria-checked', on ? 'true' : 'false'); });
+}));
+$('#cod-qtd').addEventListener('change', ()=>{
+  const varios = (+$('#cod-qtd').value || 1) > 1;
+  $('#cod-nome').disabled = varios; $('#cod-whats').disabled = varios;
+  $('#dica-qtd').textContent = varios ? 'Com mais de 1 código, o nome e o WhatsApp não são usados. Você copia cada link para enviar.' : 'Cada código vale para uma pessoa, uma vez só.';
+});
+const linkDoTeste = codigo => location.origin + location.pathname + '?c=' + encodeURIComponent(codigo);
+function mensagemConvite(primeiro, codigo, mostrar){
+  return [
+    (primeiro ? 'Oi, ' + primeiro + '!' : 'Oi!') + ' Aqui é a Ceissa.',
+    '',
+    'Separei um presente de cuidado para você: o Teste de Travas Mentais. Em poucos minutos ele mostra o que pode estar segurando o seu avanço hoje.',
+    '',
+    'É só tocar no link abaixo. O seu código já vai preenchido, você só precisa entrar:',
+    linkDoTeste(codigo),
+    '',
+    'Se o link não abrir direto, o seu código é: *' + codigo + '*',
+    '',
+    'São 50 perguntas, de 10 a 15 minutos. Escolha um momento tranquilo e responda com sinceridade, pensando em como você está HOJE.',
+    mostrar ? 'No final, você vê o seu mapa, e depois a gente conversa sobre ele.'
+            : 'Quando você terminar, eu mesma olho o seu resultado com carinho e a gente conversa.'
+  ].join('\n');
+}
 $('#btn-gerar').addEventListener('click', async ()=>{
   const b = $('#btn-gerar');
-  const nomeCli  = $('#cod-nome').value.trim();
-  const zapCli   = $('#cod-whats').value.trim();
-  b.disabled=true; b.textContent='Gerando...';
-  let codigo = novoCodigo();
-  if(!modoLocal()){
-    const r = await api(ACOES.gerarCodigo,{codigo, cliente:nomeCli, whatsapp:zapCli});
-    if(!r || r.ok === false){
-      b.disabled=false; b.textContent='Gerar código';
-      $('#caixa-codigo').innerHTML = '<div class="aviso ver">Não consegui gerar o código agora. Saia da área, entre de novo e tente outra vez.</div>';
-      return;
+  const qtd = Math.max(1, +$('#cod-qtd').value || 1);
+  const nomeCli = qtd === 1 ? $('#cod-nome').value.trim() : '';
+  const zapCli  = qtd === 1 ? $('#cod-whats').value.trim() : '';
+  const mostrar = mostrarSel;
+  b.disabled = true; b.textContent = qtd > 1 ? 'Gerando ' + qtd + ' códigos...' : 'Gerando...';
+  const gerados = [];
+  for(let i=0; i<qtd; i++){
+    let codigo = novoCodigo();
+    if(!modoLocal()){
+      const r = await api(ACOES.gerarCodigo,{codigo, cliente:nomeCli, whatsapp:zapCli, mostrar});
+      if(!r || r.ok === false){
+        $('#caixa-codigo').innerHTML = '<div class="aviso ver">Não consegui gerar o código agora. Saia da área, entre de novo e tente outra vez.</div>';
+        break;
+      }
+      codigo = r.codigo;
+    }else{
+      const lista = ler(CHAVE_CODIGOS, []);
+      lista.unshift({codigo, cliente:nomeCli, whatsapp:zapCli, criadoEm:hoje(), usado:false, mostrarResultado:mostrar});
+      guardar(CHAVE_CODIGOS, lista);
     }
-    codigo = r.codigo;
-  }else{
-    const lista = ler(CHAVE_CODIGOS, []);
-    lista.unshift({codigo, cliente:nomeCli, whatsapp:zapCli, criadoEm:hoje(), usado:false});
-    guardar(CHAVE_CODIGOS, lista);
+    gerados.push(codigo);
   }
-  b.disabled=false; b.textContent='Gerar código';
+  b.disabled = false; b.textContent = 'Gerar código';
+  if(!gerados.length) return;
 
-  const primeiro = nomeCli ? nomeCli.split(' ')[0] : '';
-  const link = location.href.split('#')[0];
-  const msg = [
-    (primeiro ? 'Oi, ' + primeiro + '! 🌿' : 'Oi! 🌿') + ' Aqui é a Ceissa.',
-    '',
-    'Preparei o seu Teste de Travas Mentais — é ele que vai me mostrar, em números, o que está te segurando hoje.',
-    '',
-    'O seu código de acesso: *' + codigo + '*',
-    '',
-    'É só abrir este link e digitar o código:',
-    link,
-    '',
-    'São 50 perguntas, de 10 a 15 minutos. Faça num lugar tranquilo e responda com sinceridade — depois a gente conversa sobre o que aparecer. 💛'
-  ].join('\n');
-  const destino = zapNumero(zapCli);
-  const rotuloZap = primeiro
-    ? 'Enviar o código para ' + primeiro + (zapCli ? ' · ' + zapCli : '')
-    : 'Enviar o código pelo WhatsApp';
-  const subZap = destino ? 'abre a conversa dela com a mensagem pronta' : 'você escolhe o contato na hora';
-
-  $('#caixa-codigo').innerHTML = `
-    <div class="codigo-gerado">
-      <div class="valor">${codigo}</div>
-      <div class="para">${nomeCli ? 'Para ' + nomeCli : 'Vale para uma pessoa, uma vez só.'}</div>
-    </div>
-    <a class="btn btn-zap" href="https://wa.me/${destino}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">
-      <span class="duas">${rotuloZap}<small>${subZap}</small></span>
-    </a>
-    <button class="btn btn-contorno" id="btn-copiar-codigo">Copiar só o código</button>`;
-  $('#btn-copiar-codigo').addEventListener('click', async e=>{
-    try{ await navigator.clipboard.writeText(codigo); e.target.textContent='Copiado!'; }
-    catch(err){ e.target.textContent='Não consegui copiar'; }
-    setTimeout(()=>{ e.target.textContent='Copiar só o código'; }, 2000);
-  });
+  const textoVis = mostrar ? 'A cliente vê o resultado no final.' : 'Só você vê o resultado.';
+  if(gerados.length === 1){
+    const codigo = gerados[0];
+    const primeiro = nomeCli ? nomeCli.split(' ')[0] : '';
+    const msg = mensagemConvite(primeiro, codigo, mostrar);
+    const destino = zapNumero(zapCli);
+    const rotuloZap = primeiro ? 'Enviar o link para ' + primeiro + (zapCli ? ' · ' + zapCli : '') : 'Enviar o link pelo WhatsApp';
+    const subZap = destino ? 'abre a conversa dela com a mensagem pronta' : 'você escolhe o contato na hora';
+    $('#caixa-codigo').innerHTML = `
+      <div class="codigo-gerado">
+        <div class="valor">${codigo}</div>
+        <div class="para">${nomeCli ? 'Para ' + nomeCli + ' · ' : ''}${textoVis}</div>
+      </div>
+      <a class="btn btn-zap" href="https://wa.me/${destino}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">
+        <span class="duas">${rotuloZap}<small>${subZap}</small></span>
+      </a>
+      <button class="btn btn-contorno" id="btn-copiar-link">Copiar o link com o código</button>
+      <button class="btn btn-contorno" id="btn-copiar-codigo">Copiar só o código</button>`;
+    $('#btn-copiar-link').addEventListener('click', async e=>{
+      try{ await navigator.clipboard.writeText(linkDoTeste(codigo)); e.target.textContent='Link copiado!'; }
+      catch(err){ e.target.textContent='Não consegui copiar'; }
+      setTimeout(()=>{ e.target.textContent='Copiar o link com o código'; }, 2000);
+    });
+    $('#btn-copiar-codigo').addEventListener('click', async e=>{
+      try{ await navigator.clipboard.writeText(codigo); e.target.textContent='Copiado!'; }
+      catch(err){ e.target.textContent='Não consegui copiar'; }
+      setTimeout(()=>{ e.target.textContent='Copiar só o código'; }, 2000);
+    });
+  }else{
+    $('#caixa-codigo').innerHTML = `
+      <div class="codigo-gerado"><div class="para">${gerados.length} códigos gerados · ${textoVis}</div></div>
+      <div class="lista-gerados">${gerados.map(c=>`
+        <div class="linha-item"><span class="esq"><span class="nome">${c}</span><span class="sub">${linkDoTeste(c)}</span></span>
+        <button class="mini-btn" data-link="${linkDoTeste(c)}">Copiar link</button></div>`).join('')}</div>
+      <button class="btn btn-contorno" id="btn-copiar-todos">Copiar todos os links</button>`;
+    $$('#caixa-codigo .mini-btn').forEach(m=> m.addEventListener('click', async e=>{
+      try{ await navigator.clipboard.writeText(m.dataset.link); m.textContent='Copiado!'; }catch(err){ m.textContent='Não consegui'; }
+      setTimeout(()=>{ m.textContent='Copiar link'; }, 1800);
+    }));
+    $('#btn-copiar-todos').addEventListener('click', async e=>{
+      try{ await navigator.clipboard.writeText(gerados.map(linkDoTeste).join('\n')); e.target.textContent='Links copiados!'; }
+      catch(err){ e.target.textContent='Não consegui copiar'; }
+      setTimeout(()=>{ e.target.textContent='Copiar todos os links'; }, 2000);
+    });
+  }
   carregarCodigos();
 });
 
@@ -1343,7 +1565,7 @@ async function carregarCodigos(){
   caixa.innerHTML = lista.map(c=>`
     <div class="linha-item">
       <span class="esq">
-        <span class="nome">${c.codigo}${c.cliente ? ' · ' + c.cliente : ''}</span>
+        <span class="nome">${c.codigo}${c.cliente ? ' · ' + c.cliente : ''}<span class="tag-vis">${c.mostrarResultado === false ? 'só você vê' : 'cliente vê'}</span></span>
         <span class="sub">${c.usado ? ('usado por ' + (c.usadoPor||'alguém') + ' · ' + (c.usadoEm||'')) : ('criado em ' + (c.criadoEm||''))}</span>
       </span>
       <span class="etiqueta ${c.usado?'usado':'livre'}">${c.usado?'usado':'disponível'}</span>
@@ -1367,13 +1589,13 @@ function desenharRespostas(lista){
   if(!lista.length){ caixa.innerHTML='<div class="vazio">Nenhuma resposta por enquanto.</div>'; return; }
   caixa.innerHTML = lista.map((r,i)=>{
     const top = (r.travas||[]).slice().sort((a,b)=>b.nota-a.nota)[0];
-    const nivel = top ? top.nivel : 'baixa';
+    const nivel = top ? nivelDe(top.nota) : 'baixa';
     return `<button class="linha-item" data-i="${i}">
       <span class="esq">
-        <span class="nome">${r.nome||'Sem nome'}${r.idade ? ', ' + r.idade : ''}</span>
+        <span class="nome">${escH(r.nome||'Sem nome')}${r.idade ? ', ' + escH(r.idade) : ''}</span>
         <span class="sub">${r.data||''}${top ? ' · ' + top.nome : ''}</span>
       </span>
-      <span class="etiqueta e-${nivel}">${(r.altas||0)} altas</span>
+      <span class="etiqueta e-${nivel}">${contarNivel(r,'alta')} altas</span>
     </button>`;
   }).join('');
   $$('#lista-respostas .linha-item').forEach(b=> b.addEventListener('click', ()=> abrirDetalhe(lista[+b.dataset.i])));
@@ -1383,33 +1605,149 @@ $('#busca').addEventListener('input', e=>{
   desenharRespostas(respostasCache.filter(r => (r.nome||'').toLowerCase().includes(t)));
 });
 
+/* ============================================================================
+   v3 — RELATÓRIO PADRONIZADO (o mesmo para a cliente e para a terapeuta)
+   ============================================================================ */
+const LIMITE_ATENCAO = 7;   // nota 7, 8, 9 ou 10 numa pergunta
+const escH = t => String(t==null ? '' : t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const defTrava = t => TRAVAS.find(x=>x.id===t.id) || TRAVAS.find(x=>x.nome===nomeAtualTrava(t.nome)) || {};
+
+/* respostas no formato [{n, pergunta, trava, valor}], vindas do teste recém-feito ou de um registro salvo */
+function respostasDe(r){
+  const lista = Array.isArray(r && r.respostas) ? r.respostas : [];
+  return lista.map(x=>{
+    const n = Number(x.n), p = PERGUNTAS[n-1] || {};
+    return { n, pergunta: x.pergunta || p.q || '', trava: TRAVAS.some(t=>t.id===x.trava) ? x.trava : p.t, valor: Number(x.valor) };
+  }).filter(x => x.n >= 1 && x.valor >= 1);
+}
+/* pontos de atenção: trava média ou baixa com pergunta de nota 7 a 10 (trava alta já é prioridade) */
+function anexarAtencao(linhas, resps){
+  linhas.forEach(l=>{ l.altos = (l.nivel==='alta') ? [] : resps.filter(x => x.trava===l.id && x.valor >= LIMITE_ATENCAO).sort((a,b)=>a.n-b.n); });
+}
+
+function htmlBlocoTrava(l, pos, modo){
+  const fundo = l.nivel==='alta' ? 'var(--alta-clara)' : l.nivel==='media' ? 'var(--media-clara)' : 'var(--baixa-clara)';
+  const corTexto = l.nivel==='alta' ? '#8A2B22' : l.nivel==='media' ? '#2F4E75' : '#2F5E3F';
+  let acao;
+  if(l.nivel==='alta'){
+    acao = `<div class="caixa caixa-urgencia"><b>Prioridade:</b> esta trava está ativa agora e cobra um preço todos os dias — em oportunidade, em relação e em saúde emocional. Quanto mais tempo ela fica solta, mais fundo o padrão se repete. Leve esta trava para a Ceissa ainda esta semana.</div>`;
+  }else if(l.nivel==='media'){
+    acao = `<div class="caixa" style="background:var(--media-clara);color:#2F4E75;font-weight:600"><b>Atenção:</b> ela não domina o seu dia, mas aparece sempre que a vida aperta. Tratada agora, não vira uma trava alta.</div>`;
+  }else{
+    acao = `<div class="caixa caixa-parabens"><b>Parabéns!</b> Ponto de força: aqui você já se sustenta bem. Essa é a base que a Ceissa vai usar para destravar as outras.</div>`;
+  }
+  const selo = l.nivel==='alta' ? `<span class="selo-prioridade">Prioridade ${pos}</span>` : '';
+  const altos = l.altos || [], nAt = altos.length;
+  const tagAt = nAt ? `<span class="tag-atencao">${nAt} ${nAt===1 ? 'ponto' : 'pontos'} de atenção${modo==='cliente' ? ' · procure a Ceissa' : ''}</span>` : '';
+  const caixaAt = (nAt && modo==='terapeuta')
+    ? `<div class="caixa caixa-atencao"><b>Pontos de atenção:</b> a trava está em nível ${l.nivel==='media' ? 'médio' : 'baixo'}, mas esta pessoa marcou nota alta (7 a 10) em ${nAt===1 ? '1 afirmação' : nAt + ' afirmações'}. Vale aprofundar no atendimento:<ul>${altos.map(x=>`<li><b>Pergunta ${x.n}</b> · nota ${x.valor}: ${escH(x.pergunta)}</li>`).join('')}</ul></div>`
+    : '';
+  return `
+    <div class="bloco-trava ${l.nivel==='alta' ? 'enfase' : ''}" style="border-left-color:${cor(l.nivel)}">
+      <div class="cabeca"><h3>${l.nome}${selo}</h3><span class="pontos" style="color:${cor(l.nivel)}">${num(l.nota)} / 10</span></div>
+      <div class="faixas"><span class="faixa" style="background:${fundo};color:${corTexto}">${nomeNivel(l.nivel)}</span>${tagAt}</div>
+      <p>${l.contexto}</p>
+      <div class="caixa caixa-tecnica"><b>Como podemos trabalhar:</b> ${l.tecnica}</div>
+      ${acao}${caixaAt}
+    </div>`;
+}
+function htmlGrupos(ordenadas, modo){
+  const grupos = [
+    { n:'alta',  cls:'g-alta',  titulo:'Travas altas: a sua prioridade agora', sub:'São as que mais pesam em você hoje e as que mais pedem cuidado. Comece por aqui.' },
+    { n:'media', cls:'g-media', titulo:'Travas médias: pontos de atenção',     sub:'Elas não dominam o seu dia, mas aparecem quando a vida aperta.' },
+    { n:'baixa', cls:'g-baixa', titulo:'Travas baixas: os seus pontos fortes', sub:'Parabéns! Aqui você já se sustenta bem, e isso é uma base valiosa.' }
+  ];
+  return grupos.map(g=>{
+    const itens = ordenadas.filter(l=>l.nivel===g.n);
+    if(!itens.length) return '';
+    return `<h3 class="grupo-titulo ${g.cls}">${g.titulo}</h3><p class="grupo-sub">${g.sub}</p>` + itens.map((l,i)=>htmlBlocoTrava(l, i+1, modo)).join('');
+  }).join('');
+}
+function htmlInsight(res, forte, modo){
+  let tit, txt;
+  if(res.altas >= 3){
+    tit = 'O seu mapa pede cuidado agora';
+    txt = `${res.altas} das suas 10 travas estão em nível alto. Isso mostra que esses padrões estão pesando no seu dia a dia, e dificilmente se desfazem sozinhos. Um acompanhamento com a Ceissa é o caminho mais seguro para destravar com orientação.`;
+  }else if(res.altas >= 1){
+    tit = 'Há pontos que pedem a sua atenção';
+    txt = `${res.altas === 1 ? 'Uma das suas travas está' : res.altas + ' das suas travas estão'} em nível alto. Tratar isso agora, com acompanhamento, evita que o padrão se repita e se aprofunde.`;
+  }else if(res.medias >= 1){
+    tit = 'Você tem uma boa base, com pontos de atenção';
+    txt = `Nenhuma trava chegou ao nível alto, mas ${res.medias === 1 ? 'uma aparece' : res.medias + ' aparecem'} com força quando a vida aperta. Vale cuidar ${res.medias === 1 ? 'dela' : 'delas'} agora, com acompanhamento, antes que cresçam.`;
+  }else{
+    tit = 'Parabéns! Você está num ótimo momento';
+    txt = 'Todas as suas travas estão em nível baixo. Parabéns pelo seu equilíbrio! Um acompanhamento ainda pode ajudar você a manter essa base e a ir mais longe.';
+  }
+  const fim = modo==='cliente' ? ' Para conversar sobre o seu resultado e começar o acompanhamento, toque no botão verde mais abaixo.' : '';
+  return `<h2>${tit}</h2><p>${txt}</p><p>A trava que mais pesa hoje é <b>${forte.nome}</b>, com nota ${num(forte.nota)} de 10.${fim}</p>`;
+}
+/* as 50 respostas, uma por uma, agrupadas por trava (só na área da terapeuta) */
+function htmlTodasRespostas(ordenadas, resps){
+  if(!resps.length) return '';
+  const blocos = ordenadas.map(l=>{
+    const qs = resps.filter(x=>x.trava===l.id).sort((a,b)=>a.n-b.n);
+    if(!qs.length) return '';
+    return `<div class="resp-trava"><h4 style="color:${cor(l.nivel)}"><b>${l.nome}</b><span>média ${num(l.nota)} · ${nomeNivel(l.nivel).toLowerCase()}</span></h4>`
+      + qs.map(x=>`<div class="resp-lin ${x.valor>=LIMITE_ATENCAO ? 'alto' : ''}"><span><b>${x.n}.</b> ${escH(x.pergunta)}</span><span class="rn">${x.valor}</span></div>`).join('') + `</div>`;
+  }).join('');
+  return `<details class="det-50"><summary>Ver as ${resps.length} respostas, uma por uma</summary>
+    <p class="nota-det">Cada linha mostra a pergunta e a nota que a pessoa deu (de 1 a 10). Notas de 7 a 10 aparecem destacadas.</p>${blocos}</details>`;
+}
+/* texto para a ficha copiada / e-mail */
+function textoAtencao(r){
+  const resps = respostasDe(r);
+  if(!resps.length) return '';
+  const linhas = (r.travas||[]).map(t=>{ const d = defTrava(t); return { id:d.id||t.id, nome:d.nome||nomeAtualTrava(t.nome), nota:Number(t.nota), nivel:nivelDe(Number(t.nota)) }; })
+    .sort((a,b)=>b.nota-a.nota);
+  anexarAtencao(linhas, resps);
+  const com = linhas.filter(l=>l.altos.length);
+  if(!com.length) return '\n\nPONTOS DE ATENÇÃO (nota 7 a 10 em travas que não estão altas):\n(nenhum)';
+  return '\n\nPONTOS DE ATENÇÃO (nota 7 a 10 em travas que não estão altas):\n' + com.map(l =>
+    '- ' + l.nome + ' (' + nomeNivel(l.nivel).toLowerCase() + ', ' + num(l.nota) + '): ' + l.altos.map(x => 'pergunta ' + x.n + ' = ' + x.valor).join('; ')).join('\n');
+}
+/* PDF: completo (com as 50 respostas) ou resumido */
+function imprimirRelatorio(completo){
+  const det = document.querySelector('.det-50');
+  const estava = det ? det.open : false;
+  document.body.classList.toggle('print-completo', !!completo);
+  if(det && completo) det.open = true;
+  const volta = () => { document.body.classList.remove('print-completo'); if(det) det.open = estava; window.removeEventListener('afterprint', volta); };
+  window.addEventListener('afterprint', volta);
+  setTimeout(() => window.print(), 60);
+}
+
 function textoFicha(r){
   const ord = (r.travas||[]).map(t=>Object.assign({}, t, { nome:(TRAVAS.find(x=>x.id===t.id)||{}).nome || nomeAtualTrava(t.nome) })).sort((a,b)=>b.nota-a.nota);
   return 'TESTE DE TRAVAS MENTAIS — Ceissa Viana\n\n' +
     'Nome: ' + (r.nome||'') + '\nIdade: ' + (r.idade||'') + '\nGênero: ' + (r.genero||'') +
     '\nWhatsApp: ' + (r.whatsapp||'') + '\nE-mail: ' + (r.email||'') +
     '\nProfissão: ' + (r.profissao||'') + '\nRenda: ' + (r.renda||'') + '\nData: ' + (r.data||'') +
-    '\n\nRESUMO: ' + (r.altas||0) + ' altas, ' + (r.medias||0) + ' médias, ' + (r.baixas||0) + ' baixas.\n\n' +
-    'NOTAS (1 a 10):\n' + ord.map(l=>'- ' + l.nome + ': ' + num(l.nota) + ' (' + nomeNivel(l.nivel||nivelDe(l.nota)).toLowerCase() + ')').join('\n') +
+    '\n\nRESUMO: ' + contarNivel(r,'alta') + ' altas, ' + contarNivel(r,'media') + ' médias, ' + contarNivel(r,'baixa') + ' baixas.\n\n' +
+    'NOTAS (1 a 10):\n' + ord.map(l=>'- ' + l.nome + ': ' + num(l.nota) + ' (' + nomeNivel(nivelDe(l.nota)).toLowerCase() + ')').join('\n') +
+    textoAtencao(r) +
     '\n\nMOTIVO DA BUSCA POR TERAPIA:\n' + (r.motivo||'(não respondeu)') +
     '\n\nMAIOR DOR:\n' + (r.dor||'') +
     '\n\nCOMO SE VÊ HOJE:\n' + (r.olhar||'');
 }
 
 function abrirDetalhe(r){
+  document.body.classList.remove('print-completo');
   $$('.aba-conteudo').forEach(x=> x.style.display='none');
   $('#detalhe-resposta').style.display='block';
-  const travas = (r.travas||[]).map(t=>Object.assign({}, t, {
-    nome:(TRAVAS.find(x=>x.id===t.id)||{}).nome || nomeAtualTrava(t.nome),
-    curto:(TRAVAS.find(x=>x.id===t.id)||{}).curto || nomeAtualTrava(t.nome),
-    nivel: t.nivel || nivelDe(t.nota)
-  }));
+  const travas = (r.travas||[]).map(t=>{
+    const d = defTrava(t), nota = Number(t.nota);
+    return Object.assign({}, t, { id:d.id||t.id, nome:d.nome || nomeAtualTrava(t.nome), curto:d.curto || nomeAtualTrava(t.nome),
+      contexto:d.contexto||'', tecnica:d.tecnica||'', nota, pct:Math.round(nota*10), nivel:nivelDe(nota) });
+  });
   const ord = travas.slice().sort((a,b)=>b.nota-a.nota);
+  const resps = respostasDe(r);
+  anexarAtencao(ord, resps);
+  const res = { altas:contarNivel(r,'alta'), medias:contarNivel(r,'media'), baixas:contarNivel(r,'baixa') };
   const primeiro = (r.nome||'').split(' ')[0];
   const destino = zapNumero(r.whatsapp);
-  const topTres = ord.slice(0,3).map(l=> (l.nivel==='alta'?'🔴':l.nivel==='media'?'🔵':'🟢') + ' ' + l.nome + ' — ' + num(l.nota) + '/10').join('\n');
+  const topTres = ord.slice(0,3).map(l=> '- ' + l.nome + ': ' + num(l.nota) + '/10 (' + nomeNivel(l.nivel).toLowerCase() + ')').join('\n');
   const msgCli = [
-    'Oi, ' + primeiro + '! 🌿 Aqui é a Ceissa.',
+    'Oi, ' + primeiro + '! Aqui é a Ceissa.',
     '',
     'Já olhei com calma o seu Teste de Travas Mentais e separei o que mais me chamou atenção:',
     '',
@@ -1421,41 +1759,70 @@ function abrirDetalhe(r){
   ].join('\n');
 
   $('#detalhe-conteudo').innerHTML = `
-    <h2 style="font-size:26px;margin:10px 0 4px">${r.nome||'Sem nome'}</h2>
-    <p style="color:var(--tinta-suave);font-size:16px;margin-bottom:16px">${r.data||''} · ${(r.altas||0)} travas altas</p>
+    <h2 style="font-size:26px;margin:10px 0 4px">${escH(r.nome||'Sem nome')}</h2>
+    <p style="color:var(--tinta-suave);font-size:16px;margin-bottom:16px">${escH(r.data||'')} · ${res.altas} travas altas</p>
 
     <div class="ficha">
       <dl>
-        <dt>Idade</dt><dd>${r.idade||'—'}</dd>
-        <dt>Gênero</dt><dd>${r.genero||'—'}</dd>
-        <dt>WhatsApp</dt><dd>${r.whatsapp||'—'}</dd>
-        <dt>E-mail</dt><dd>${r.email||'—'}</dd>
-        <dt>Profissão</dt><dd>${r.profissao||'—'}</dd>
-        <dt>Renda</dt><dd>${r.renda||'—'}</dd>
+        <dt>Idade</dt><dd>${escH(r.idade||'—')}</dd>
+        <dt>Gênero</dt><dd>${escH(r.genero||'—')}</dd>
+        <dt>WhatsApp</dt><dd>${escH(r.whatsapp||'—')}</dd>
+        <dt>E-mail</dt><dd>${escH(r.email||'—')}</dd>
+        <dt>Profissão</dt><dd>${escH(r.profissao||'—')}</dd>
+        <dt>Renda</dt><dd>${escH(r.renda||'—')}</dd>
       </dl>
       <div class="aberta">
-        <h4>O que a levou a procurar terapia</h4><p>${r.motivo || '<i>não respondeu</i>'}</p>
-        <h4>Maior dor e quando começou</h4><p>${r.dor||'—'}</p>
-        <h4>O que vê e sente ao olhar para si</h4><p>${r.olhar||'—'}</p>
+        <h4>O que a levou a procurar terapia</h4><p>${r.motivo ? escH(r.motivo) : '<i>não respondeu</i>'}</p>
+        <h4>Maior dor e quando começou</h4><p>${escH(r.dor||'—')}</p>
+        <h4>O que vê e sente ao olhar para si</h4><p>${escH(r.olhar||'—')}</p>
       </div>
     </div>
 
-    <div class="teia"><canvas id="teia-detalhe"></canvas></div>
+    <div class="painel-geral">
+      <h2>O mapa em números</h2>
+      <div class="placar">
+        <div class="pt-alta"><b>${res.altas}</b><span>travas altas<br>(prioridade)</span></div>
+        <div class="pt-media"><b>${res.medias}</b><span>travas médias<br>(atenção)</span></div>
+        <div class="pt-baixa"><b>${res.baixas}</b><span>travas baixas<br>(pontos fortes)</span></div>
+      </div>
+    </div>
+
+    ${ord.length ? `<div class="insight">${htmlInsight(res, ord[0], 'terapeuta')}</div>` : ''}
+
+    <div class="teia"><canvas id="teia-detalhe"></canvas>
+      <div class="legenda">
+        <span><i style="background:#B23A2F"></i>Alta (6 a 10)</span>
+        <span><i style="background:#3F6698"></i>Média (5 a 5,9)</span>
+        <span><i style="background:#3F7D55"></i>Baixa (até 4,9)</span>
+      </div>
+    </div>
+
+    <h2 class="secao-titulo">As dez travas, da mais forte para a mais leve</h2>
     <div class="barras">${ord.map(l=>`
       <div class="barra-item">
         <div class="topo"><span>${l.nome}</span><b style="color:${cor(l.nivel)}">${num(l.nota)} / 10</b></div>
-        <div class="trilho"><i style="width:${Math.round(l.nota*10)}%;background:${cor(l.nivel)}"></i></div>
+        <div class="trilho"><i style="width:${l.pct}%;background:${cor(l.nivel)}"></i></div>
       </div>`).join('')}
     </div>
 
+    <h2 class="secao-titulo">O que cada trava está fazendo</h2>
+    <div id="detalhes-terapeuta">${htmlGrupos(ord, 'terapeuta')}</div>
+
+    ${htmlTodasRespostas(ord, resps)}
+
     <a class="btn btn-zap" href="https://wa.me/${destino}?text=${encodeURIComponent(msgCli)}" target="_blank" rel="noopener">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2 22l5.37-1.4a9.8 9.8 0 0 0 4.67 1.19h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2m0 17.94c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.1 8.1 0 0 1-1.24-4.32c0-4.5 3.67-8.16 8.18-8.16 2.18 0 4.23.85 5.77 2.4a8.1 8.1 0 0 1 2.39 5.77c0 4.5-3.67 8.17-8.11 8.17"/></svg>
-      <span class="duas">Falar com ${primeiro} no WhatsApp<small>${r.whatsapp||'escolher contato'} · mensagem já escrita</small></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2 22l5.37-1.4a9.8 9.8 0 0 0 4.67 1.19h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2m0 17.94c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.1 8.1 0 0 1-1.24-4.32c0-4.5 3.67-8.16 8.18-8.16 2.18 0 4.23.85 5.77 2.4a8.1 8.1 0 0 1 2.39 5.77c0 4.5-3.67 8.17-8.11 8.17m4.47-6.12c-.24-.12-1.44-.71-1.67-.79-.22-.08-.38-.12-.55.12s-.63.79-.77.95-.28.18-.52.06c-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.36-1.69s-.01-.37.11-.49c.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42s-.55-1.32-.75-1.81c-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.3s-.84.82-.84 2 .86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.39 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.44-.59 1.64-1.16s.2-1.06.14-1.16c-.06-.1-.22-.16-.46-.28"/></svg>
+      <span class="duas">Falar com ${escH(primeiro)} no WhatsApp<small>${escH(r.whatsapp||'escolher contato')} · mensagem já escrita</small></span>
     </a>
     <button class="btn btn-argila" id="btn-email-minha"><span class="duas">Enviar para o meu e-mail<small>${CONFIG.emailTerapeuta}</small></span></button>
-    ${r.email ? `<button class="btn btn-contorno" id="btn-email-cliente"><span class="duas">Enviar para ${primeiro}<small>${r.email}</small></span></button>` : ''}
+    ${r.email ? `<button class="btn btn-contorno" id="btn-email-cliente"><span class="duas">Enviar para ${escH(primeiro)}<small>${escH(r.email)}</small></span></button>` : ''}
     <button class="btn btn-contorno" id="btn-copiar-ficha">Copiar a ficha completa</button>
-    <button class="btn btn-contorno" id="btn-imprimir">Imprimir ou salvar em PDF</button>`;
+    <button class="btn btn-contorno" id="btn-imprimir">Salvar em PDF ou imprimir</button>
+    <div class="escolha-pdf" id="escolha-pdf" hidden>
+      <p>O que você quer incluir no PDF?</p>
+      <button class="btn btn-argila" id="pdf-completo"><span class="duas">Relatório completo<small>com as ${resps.length || 50} respostas, uma por uma</small></span></button>
+      <button class="btn btn-contorno" id="pdf-resumo"><span class="duas">Relatório resumido<small>sem as respostas, só as demais informações</small></span></button>
+    </div>`;
 
   if(travas.length) desenharTeia($('#teia-detalhe'), travas);
 
@@ -1466,7 +1833,12 @@ function abrirDetalhe(r){
     catch(err){ e.currentTarget.textContent='Não consegui copiar'; }
     setTimeout(()=>{ const b=$('#btn-copiar-ficha'); if(b) b.textContent='Copiar a ficha completa'; }, 2200);
   });
-  $('#btn-imprimir').addEventListener('click', ()=> window.print());
+  $('#btn-imprimir').addEventListener('click', ()=>{
+    if(!resps.length){ imprimirRelatorio(false); return; }      // registro antigo, sem as respostas guardadas
+    $('#escolha-pdf').hidden = !$('#escolha-pdf').hidden;
+  });
+  $('#pdf-completo').addEventListener('click', ()=> imprimirRelatorio(true));
+  $('#pdf-resumo').addEventListener('click', ()=> imprimirRelatorio(false));
   window.scrollTo({top:0});
 }
 
